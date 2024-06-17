@@ -1,20 +1,11 @@
 {
-    "name": "kuro-ai-project",
+    "version": 2,
     "builds": [
-      {
-        "src": "index.html",
-        "use": "@vercel/static-build"
-      }
+      { "src": "index.html", "use": "@vercel/static" }
     ],
     "routes": [
-      {
-        "src": "/api/(.*)",
-        "dest": "api/chat.js"
-      },
-      {
-        "src": "/(.*)",
-        "dest": "index.html"
-      }
+      { "handle": "filesystem" }
     ]
   }
+  
   
